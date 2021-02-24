@@ -1,0 +1,44 @@
+/* .block {
+  position: relative;
+} */
+
+.block__wrapper {
+  position: relative;
+}
+
+.block__item {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  background-color: #c6d5c983;
+
+  position: absolute;
+  width: 100%;
+  
+  height: 150px;
+  margin: 5rem 0;
+  transition: opacity 0.3s, visibility 0s ease-in-out 0.3s;
+}
+
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
+
+
+.block__arrows {
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+}
+
+.block__arrows.next {
+  right: 10px;
+}
+
+.block__arrows.prev {
+  left: 10px;
+}
