@@ -1,7 +1,8 @@
-/* .block {
-  position: relative;
-} */
 
+.block {
+  position: inherit;
+  height: 170px;
+}
 .block__wrapper {
   position: relative;
 }
@@ -14,9 +15,8 @@
 
   position: absolute;
   width: 100%;
-  
   height: 150px;
-  margin: 5rem 0;
+
   transition: opacity 0.3s, visibility 0s ease-in-out 0.3s;
 }
 
@@ -29,9 +29,15 @@
 }
 
 
+.content__item {
+  cursor: pointer;
+}
+
+
+
 .block__arrows {
   position: absolute;
-  top: 30%;
+  top: 15%;
   cursor: pointer;
 }
 
