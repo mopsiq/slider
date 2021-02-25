@@ -1,15 +1,15 @@
 class Tabs {
-  headerChildrens;
-  contentChildrens;
+
+  _headerChildrens;
+  _contentChildrens;
 
   constructor(header, content) {
     this.header = header;
     this.content = content;
-    this.activeHeader = 0;
+    this._activeHeader = 0;
 
     this.initTabs(header, content)
-    this.testRender();
-    this.content.addEventListener('click', e => this.render(e) )
+    this.content.addEventListener('click', e => this.renderTab(e) )
   }
 
   initTabs(header, content) {
@@ -24,24 +24,21 @@ class Tabs {
     for(let i of content.children) {
       contentChildrens.push(i)
     }
+    this.header.children[this._activeHeader].classList.add('active');
+    this.content.children[this._activeHeader].classList.add('active')
+
     this.headerChildrens = headerChildrens;
     this.contentChildrens = contentChildrens;
   }
 
-  render(e) {
-    this.activeHeader = this.contentChildrens.indexOf(e.target);
-    console.log(this.activeHeader)
-    this.testRender();
-  }
+  renderTab(e) {
+    this.content.children[this._activeHeader].classList.remove('active')
+    this.header.children[this._activeHeader].classList.remove('active');
 
-  testRender() {
-    for(let i = 0; i < this.header.childElementCount; i++) {
-      if(i !== this.activeHeader) {
-        this.header.children[i].classList.add('hidden');
-      } else {
-        this.header.children[i].classList.remove('hidden');
-      }
-    }
+    this._activeHeader = this.contentChildrens.indexOf(e.target);
+
+    this.content.children[this._activeHeader].classList.add('active')
+    this.header.children[this._activeHeader].classList.add('active');
   }
 
 }

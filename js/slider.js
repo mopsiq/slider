@@ -11,6 +11,10 @@ class Slider {
     this._maxSlide = wrapperBlock.childElementCount;
 
     this.renderSlide()
+
+    setInterval(() => {
+      this.nextSlide()
+    }, 2500);
   }
 
   renderArrows(block) {

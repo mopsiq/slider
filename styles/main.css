@@ -32,34 +32,31 @@
   }
 }
 
-@keyframes prev {
-  from {
-      opacity: 0.5;
-      transform: translateX(-400px);
-  }
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
+.content__header {
+  margin: 0 auto;
+  
+  text-align: center;
+  width: 350px;
+  height: 150px;
+  border: 1px solid #000;
+}
+
+.content__text {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.content__item {
+  cursor: pointer;
 }
 
 .active {
   display: block;
   visibility: visible;
   opacity: 1;
-}
 
-
-/* .hidden {
-  visibility: hidden;
-  opacity: 0;
-
-  transition: opacity 0.3s, visibility 0s linear 0.3s;
-} */
-
-
-.content__item {
-  cursor: pointer;
+  background-color: aquamarine;
 }
 
 
