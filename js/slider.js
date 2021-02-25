@@ -14,7 +14,7 @@ class Slider {
 
     setInterval(() => {
       this.nextSlide()
-    }, 2500);
+    }, 3500);
   }
 
   renderArrows(block) {
