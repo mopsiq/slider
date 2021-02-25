@@ -9,4 +9,3 @@ const tab = document.querySelector('.content__tab');
 
 const mySlider = new Slider(block, blockWrapper);
 const myTabs = new tabs(headerInTab, tab);
-console.log(mySlider.maxSlide)
