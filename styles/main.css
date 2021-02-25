@@ -8,7 +8,7 @@
 }
 
 .block__item {
-  display: block;
+  display: none;
   visibility: visible;
   opacity: 1;
   background-color: #c6d5c983;
@@ -20,13 +20,20 @@
   transition: opacity 0.3s, visibility 0s ease-in-out 0.3s;
 }
 
+.active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+}
 
-.hidden {
+
+/* .hidden {
   visibility: hidden;
   opacity: 0;
 
   transition: opacity 0.3s, visibility 0s linear 0.3s;
-}
+} */
 
 
 .content__item {
