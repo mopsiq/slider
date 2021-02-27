@@ -45,17 +45,20 @@ class Slider {
     if(this.countSlider >= this._maxSlide) {
       this.countSlider = 0;
     }
-    this.renderSlide()
 
+    this.renderSlide()
+    this.currentSlide.style.animationName = 'next'
+    
   }
 
   prevSlide() {
     this.currentSlide.classList.remove('active')
-    if(this.countSlider - 1 == -1) {
+    if(this.countSlider - 1 === -1) {
       this.countSlider = this._maxSlide;
     }
     this.countSlider -= 1;
     this.renderSlide()
+    this.currentSlide.style.animationName = 'prev'
   }
 
 };

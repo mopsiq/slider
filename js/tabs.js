@@ -8,14 +8,13 @@ class Tabs {
     this.content = content;
     this._activeHeader = 0;
 
-    this.initTabs(header, content)
     this.content.addEventListener('click', e => this.renderTab(e) )
+    this.initTabs(header, content)
   }
 
   initTabs(header, content) {
     let headerChildrens = [];
     let contentChildrens = [];
-    
     
     for(let i of header.children) {
       headerChildrens.push(i)
